@@ -1,6 +1,7 @@
 import * as S from './styles'
-import bgImg from '../../assets/background.png'
+
 import Button from '@components/Button'
+import bgImg from '../../assets/background.png'
 
 export default function SignIn() {
   return (
@@ -9,7 +10,7 @@ export default function SignIn() {
       <S.Slogan>Gestão de uso de veículos</S.Slogan>
 
       <S.ButtonContainer>
-        <Button title="Entrar com Google" isLoading />
+        <Button title="Entrar com Google" />
       </S.ButtonContainer>
     </S.Container>
   )

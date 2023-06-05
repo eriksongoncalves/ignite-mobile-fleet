@@ -1,12 +1,14 @@
 {
   "name": "ignitefleet",
   "version": "1.0.0",
-  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
+    "expo:prebuild": "npx expo prebuild",
+    "build:android": "npx expo run:android",
+    "build:ios": "npx expo run:ios",
+    "start": "expo start --dev-client",
     "start:wsl": "expo start --tunnel",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "web": "expo start --web",
     "lint": "eslint src --ext ts,tsx --max-warnings=0",
     "prettier": "prettier --check 'src/**/**/*.{ts,tsx}'",
@@ -19,7 +21,8 @@
     "expo-status-bar": "~1.4.4",
     "react": "18.2.0",
     "react-native": "0.71.8",
-    "styled-components": "^5.3.9"
+    "styled-components": "^5.3.9",
+    "expo-splash-screen": "~0.18.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -36,6 +39,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.8.8",
+    "react-native-dotenv": "^3.4.8",
     "typescript": "^4.9.5"
   },
   "private": true
