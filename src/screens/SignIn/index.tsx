@@ -1,11 +1,11 @@
-import { StatusBar } from 'expo-status-bar'
-import { Text, View } from 'react-native'
+import { Text } from 'react-native'
+
+import * as S from './styles'
 
 export default function SignIn() {
   return (
-    <View>
+    <S.Wrapper>
       <Text>Hello</Text>
-      <StatusBar style="auto" />
-    </View>
+    </S.Wrapper>
   )
 }
