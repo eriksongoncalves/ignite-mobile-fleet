@@ -8,7 +8,9 @@ module.exports = function (api) {
         {
           moduleName: '@env',
           allowUndefined: false
-        },
+        }
+      ],
+      [
         'module-resolver',
         {
           root: ['./src'],

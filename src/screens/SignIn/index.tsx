@@ -1,18 +1,18 @@
+import { useEffect, useState } from 'react'
+import { Alert } from 'react-native'
 import * as WebBrowser from 'expo-web-browser'
 import * as Google from 'expo-auth-session/providers/google'
 
 import * as S from './styles'
 import bgImg from '../../assets/background.png'
-import Button from '@components/Button'
 import { ANDROID_CLIENT_ID, IOS_CLIENT_ID } from '@env'
-import { useEffect, useState } from 'react'
-import { Alert } from 'react-native'
+import Button from '@components/Button'
 
 WebBrowser.maybeCompleteAuthSession()
 
 export default function SignIn() {
   const [isAuthenticating, setIsAuthenticating] = useState(false)
-  const [_, response, googleSignIn] = Google.useAuthRequest({
+  const [, response, googleSignIn] = Google.useAuthRequest({
     androidClientId: ANDROID_CLIENT_ID,
     iosClientId: IOS_CLIENT_ID,
     scopes: ['profile', 'email']
