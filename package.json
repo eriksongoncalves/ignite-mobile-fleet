@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "scripts": {
     "expo:prebuild": "npx expo prebuild",
-    "build:android": "npx expo run:android",
-    "build:ios": "npx expo run:ios",
     "start": "expo start --dev-client",
     "start:wsl": "expo start --tunnel",
     "android": "expo run:android",
@@ -16,17 +14,19 @@
   },
   "dependencies": {
     "@expo-google-fonts/roboto": "^0.2.3",
+    "@realm/react": "^0.4.3",
     "expo": "~48.0.18",
-    "expo-font": "~11.1.1",
-    "expo-status-bar": "~1.4.4",
-    "react": "18.2.0",
-    "react-native": "0.71.8",
-    "styled-components": "^5.3.9",
-    "expo-splash-screen": "~0.18.2",
-    "expo-web-browser": "~12.1.1",
+    "expo-application": "~5.1.1",
     "expo-auth-session": "~4.0.3",
     "expo-crypto": "~12.2.1",
-    "expo-application": "~5.1.1"
+    "expo-font": "~11.1.1",
+    "expo-splash-screen": "~0.18.2",
+    "expo-status-bar": "~1.4.4",
+    "expo-web-browser": "~12.1.1",
+    "react": "18.2.0",
+    "react-native": "0.71.8",
+    "realm": "^11.9.0",
+    "styled-components": "^5.3.9"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
