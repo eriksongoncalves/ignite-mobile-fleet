@@ -7,9 +7,10 @@ import {
   Roboto_400Regular,
   Roboto_700Bold
 } from '@expo-google-fonts/roboto'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
 
 import SignIn from './src/screens/SignIn'
-import Home from './src/screens/Home'
+import Routes from './src/routes'
 import { theme } from './src/theme'
 import { REALM_APP_ID } from '@env'
 import Loading from '@components/Loading'
@@ -27,10 +28,12 @@ export default function App() {
   return (
     <AppProvider id={REALM_APP_ID}>
       <ThemeProvider theme={theme}>
-        <StatusBar style="light" backgroundColor="transparent" translucent />
-        <UserProvider fallback={SignIn}>
-          <Home />
-        </UserProvider>
+        <SafeAreaProvider>
+          <StatusBar style="light" backgroundColor="transparent" translucent />
+          <UserProvider fallback={SignIn}>
+            <Routes />
+          </UserProvider>
+        </SafeAreaProvider>
       </ThemeProvider>
     </AppProvider>
   )
