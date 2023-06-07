@@ -1,9 +1,11 @@
 import * as S from './styles'
 
+import HomeHeader from '@components/HomeHeader'
+
 export default function Home() {
   return (
     <S.Container>
-      <S.Title>Home</S.Title>
+      <HomeHeader />
     </S.Container>
   )
 }
